@@ -3,6 +3,7 @@ pipeline {
 
     options {
         timestamps()
+        skipDefaultCheckout(true)
     }
 
     environment {
@@ -12,6 +13,13 @@ pipeline {
     }
 
     stages {
+        stage('Checkout') {
+            steps {
+                deleteDir()
+                checkout scm
+            }
+        }
+
         stage('Checkout Info') {
             steps {
                 sh '''
