@@ -7,7 +7,7 @@ class HelloViewTests(TestCase):
         response = self.client.get(reverse('hello'))
 
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json()['message'], 'Hello from Django + Jenkins')
+        self.assertEqual(response.json()['message'], 'Hello from Django + Jenkins i love you')
 
     def test_health_endpoint(self):
         response = self.client.get(reverse('health'))
