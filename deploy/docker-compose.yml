@@ -1,0 +1,10 @@
+services:
+  django:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: jenkins-django-backend:local
+    container_name: django-backend-lab-app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
