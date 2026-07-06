@@ -10,6 +10,8 @@ pipeline {
         APP_IMAGE = 'jenkins-django-backend:local'
         COMPOSE_PROJECT = 'jenkins-django-deploy'
         DEPLOY_HEALTH_URL = 'http://host.docker.internal:8000/health/'
+        PIP_INDEX_URL = 'https://pypi.tuna.tsinghua.edu.cn/simple'
+        PIP_TRUSTED_HOST = 'pypi.tuna.tsinghua.edu.cn'
     }
 
     stages {
